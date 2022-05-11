@@ -1,0 +1,37 @@
+﻿
+@model Pizza
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+           <div class="d-flex align-items-center ">
+               <h1>Nuova Pizza</h1>
+           </div>
+            <form action=@Url.Action("Create", "Pizza") method="post" class="row g-3">
+                @Html.AntiForgeryToken()
+              <div class="col-md-6">
+                <strong>Titolo:</strong>
+                <input asp-for="title" type="text" class="d-block w-100">
+              </div>
+              <div class="col-md-6">
+                <strong>inserisci il nome del file jpg (non path):</strong>
+                <input asp-for="image" type="text" class="d-block w-100">
+              </div>
+             <div class="col-md-6">
+                <strong>inserisci il nome del file jpg (non path):</strong>
+                <input asp-for="image2" type="text" class="d-block w-100">
+              </div>
+              <div class="col-md-6">
+                <strong>inserisci il nome del file jpg (non path):</strong>
+                <input asp-for="image2" type="number" class="d-block w-100">
+              </div>
+              <div class="col-md-6">
+                <strong>Ingredienti della pizza:</strong>
+                <textarea asp-for="ingredienti" rows="10" class="d-block w-100"></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Salva</button>
+              </div>
+            </form>
+        </div>
+   </div>
+</div>
